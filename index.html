@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="author" content="">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+	</head>
+	<body>
+		<main>
+			<section id="signin-section">
+				<script type="text/javascript" src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js"></script>
+				<div id="appleid-signin" data-color="white" data-border="false" data-type="sign in"></div>
+				<script type="text/javascript">
+					AppleID.auth.init({
+						clientId : 'com.example.www',
+						scope : 'name email',
+						redirectURI : 'https://www.example.com/api/signin/',
+						state : 'origin:web',
+						usePopup : false
+					});
+				</script>
+			</section>
+		</main>
+	</body>
+</html>
